@@ -13,4 +13,4 @@ Sound Event Localization and Detection code for DCASE 2022 / ICASSP 2023
 ![image2](./image/Fig2.png)
 
 # Results
-![image3](./image/Fig3.png)
+![image3](./image/Fig3.PNG)
