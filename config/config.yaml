@@ -1,0 +1,49 @@
+debug : False
+do_pca : False
+ckpt_dir : 'ckpt/'
+
+multi_gpu : False
+batch_size : 16
+epochs : 200
+learning_rate : 0.001
+patience : 100
+eps : 0.000000001
+
+Augmentation :
+  num_rotation_pattern : 16
+
+Dataset :
+  rootpath : "E:/STARSS22/base_folder_2022/"
+  feature_savepath : "E:/STARSS22/feature_folder_2022/"
+  num_classes : 13
+  azimuth_range : 361 #[-180, 180]
+  elevation_range : 181 #[-90, 90]
+  fs : 24000
+  hop_len_s : 0.01
+  label_hop_len_s : 0.1
+  feature_audio_len_s : 2
+  nb_mel_bins : 128
+  nb_channels : 4
+  max_num_tracks : 5
+  num_repeat_rotation : 4
+
+Model :
+  block_depth : 5
+  num_blocks : 5
+  channels : 64
+  embed_dim : 256
+  num_head : 8
+  num_attention_layer : 1
+
+Training :
+  ranking : 999
+
+  src_teacher_forcing_ratio : 1.0
+
+Evaluation :
+  dataset : 'foa'
+  dataset_dir : 'E:\\STARSS22/base_folder_2022'
+  lad_doa_thresh : 20
+  average : 'macro'
+  output_dir : 'results/'
+  thresh_unify : 15
